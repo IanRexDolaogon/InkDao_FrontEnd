@@ -1,7 +1,7 @@
 <script setup>
 import { useRoute } from 'vue-router'
 import { novelsData } from '../data.js'
-
+import { globalStore } from '../store.js'
 // 1. Get the current route (URL)
 const route = useRoute()
 
@@ -28,6 +28,13 @@ const novel = novelsData.find(n => n.id === novelId)
           </div>
           <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-md font-bold text-sm transition shadow-sm">
             START READING
+          </button>
+          <button 
+            @click="globalStore.toggleLibrary(novel.id)"
+            :class="globalStore.isInLibrary(novel.id) ? 'bg-green-50 text-green-700 border-green-300 hover:bg-green-100' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'"
+            class="w-full border py-3 rounded-md font-bold text-sm transition shadow-sm flex items-center justify-center gap-2"
+          >
+            {{ globalStore.isInLibrary(novel.id) ? '✓ IN LIBRARY' : '+ ADD TO LIBRARY' }}
           </button>
           <button class="w-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 py-3 rounded-md font-bold text-sm transition shadow-sm">
             CHAPTERS LIST

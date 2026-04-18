@@ -19,6 +19,14 @@ const rankings = computed(() => ({
 <template>
   <main class="max-w-7xl mx-auto px-4 mt-6 space-y-4">
     
+    <div class="w-full h-48 md:h-64 lg:h-80 rounded-md overflow-hidden shadow-sm mb-6">
+      <img 
+        src="../assets/banner.png" 
+        alt="Welcome to InkDao" 
+        class="w-full h-full object-cover object-center"
+      />
+    </div>
+    
     <div class="flex flex-col lg:flex-row gap-6 mt-4">
       
       <div class="lg:w-3/4 bg-white p-4 rounded-md shadow-sm border border-gray-200 h-fit">
