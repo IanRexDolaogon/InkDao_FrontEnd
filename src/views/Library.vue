@@ -67,9 +67,9 @@ const displayedNovels = computed(() => {
           :value="globalStore.getStatus(novel.id)"
           class="w-full bg-gray-50 border border-gray-300 text-gray-700 text-xs font-bold rounded px-2 py-2 focus:outline-none focus:ring-1 focus:ring-purple-500 cursor-pointer shadow-sm"
         >
-          <option value="will_read">📌 WILL READ</option>
-          <option value="reading">📖 READING</option>
-          <option value="completed">🏆 COMPLETED</option>
+          <option value="will_read">WILL READ</option>
+          <option value="reading">READING</option>
+          <option value="completed">COMPLETED</option>
         </select>
         
         <button 

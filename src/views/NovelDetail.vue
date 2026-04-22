@@ -18,7 +18,7 @@ const novel = novelsData.find(n => n.id === novelId)
     
     <div v-if="novel">
       <div class="text-xs text-gray-500 mb-6 font-bold tracking-wide">
-        ↘ WebNovels and Books <span class="font-normal text-gray-600">↘ {{ novel.genre }}</span>
+         WebNovels and Books <span class="font-normal text-gray-600"> Genre: {{ novel.genre }}</span>
       </div>
 
       <div class="flex flex-col lg:flex-row gap-8">
