@@ -27,8 +27,8 @@ const recentlyRead = computed(() => myLibraryNovels.value.slice(0, 5))
     
     <div class="bg-white p-6 border-2 border-black flex flex-col sm:flex-row items-center gap-6">
       
-      <div class="h-24 w-24 bg-black text-white rounded-full flex items-center justify-center text-4xl flex-shrink-0">
-        👤
+     <div class="h-24 w-24 bg-white border-2 border-black flex items-center justify-center flex-shrink-0">
+        <img src="../assets/profile_icon.svg" class="h-12 w-12 object-contain" />
       </div>
       
       <div class="text-center sm:text-left flex-1">
