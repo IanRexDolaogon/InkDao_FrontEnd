@@ -1,34 +1,34 @@
 <template>
-  <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <div class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
 
-    <div class="absolute inset-0 z-0 bg-black">
-      
-      <img src="../assets/banner.png" alt="InkDao Background" class="w-full h-full object-cover opacity-40" />
-      
-      <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"></div>
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/banner.png" alt="InkDao Background" class="w-full h-full object-cover opacity-20" />
+      <div class="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
     </div>
 
-    <div class="relative z-10 bg-[#2a2c37]/90 p-10 rounded-xl shadow-2xl max-w-lg w-full text-center border border-gray-700 mx-4">
+    <div class="relative z-10 bg-white p-10 border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] max-w-lg w-full text-center mx-4">
       
       <div class="flex justify-center mb-6">
-        <img src="../assets/logo.png" alt="InkDao Logo" class="h-16 w-auto object-contain drop-shadow-md" />
+        <img src="../assets/logo.png" alt="InkDao Logo" class="h-16 w-auto object-contain" />
       </div>
 
-      <h1 class="text-3xl font-bold text-white mb-4 tracking-wide">Welcome to InkDao</h1>
+      <h1 class="text-4xl font-bold text-black mb-4 uppercase tracking-tighter">Welcome to InkDao</h1>
 
-      <p class="text-gray-300 mb-8 leading-relaxed text-sm">
-        Your ultimate sanctuary for translated webnovels. Develop by Rex Ian V. Dolaogon from University of Southern Mindanao.
+      <p class="text-black mb-8 leading-relaxed text-sm font-medium">
+        Your ultimate sanctuary for translated webnovels. Developed by Rex Ian V. Dolaogon from University of Southern Mindanao.
       </p>
 
       <router-link 
         to="/home" 
-        class="inline-block w-full bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-md transition-colors shadow-lg border border-gray-700 text-lg tracking-wider"
-        >
-        ENTER THE LIBRARY
-        </router-link>
+        class="inline-block w-full bg-black hover:bg-gray-800 text-white font-bold py-4 px-6 transition-all border-2 border-black text-lg uppercase tracking-widest"
+      >
+        Enter the Library
+      </router-link>
 
-      <div class="mt-8 pt-6 border-t border-gray-600">
-        <p class="text-xs text-gray-500">Guest mode active. This is just a demo, all the novels shown are just samples.</p>
+      <div class="mt-8 pt-6 border-t-2 border-black">
+        <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">
+          Guest mode active. Demo version. All novels shown are just samples.
+        </p>
       </div>
       
     </div>

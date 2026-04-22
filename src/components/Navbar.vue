@@ -1,30 +1,42 @@
 <template>
-  <nav class="bg-black text-white flex items-center justify-between px-6 py-3 shadow-md border-b border-gray-800">
+  <nav class="bg-white text-black flex items-center justify-between px-6 py-4 border-b-2 border-black">
     
-    <div class="flex items-center gap-6">
-      <router-link to="/home" class="flex items-center hover:opacity-80 transition-opacity cursor-pointer">
-        <img src="../assets/logo.png" alt="InkDao Logo" class="h-12 w-auto object-contain" />
-        <span class="font-bold text-2xl ml-2">INKDAO</span>
+    <div class="flex items-center">
+      <router-link to="/home" class="flex items-center hover:opacity-70 transition-opacity cursor-pointer">
+        <img src="../assets/logo.png" alt="InkDao Logo" class="h-10 w-auto object-contain" />
+        <span class="font-bold text-2xl ml-2 tracking-tighter">INKDAO</span>
       </router-link>
     </div>
 
-    <div class="flex items-center gap-6 text-sm text-gray-300">
+    <div class="flex items-center gap-8 text-sm font-bold uppercase tracking-wider">
       
-      <router-link to="/library" class="hover:text-white transition-colors">Library</router-link>
-      <router-link to="/novels" class="hover:text-white transition-colors">Novels</router-link>
-      <a href="#" class="hover:text-white transition-colors">Ranking</a>
+      <router-link to="/library" class="hover:underline">Library</router-link>
+      <router-link to="/novels" class="hover:underline">Novels</router-link>
+      <a href="#" class="hover:underline">Ranking</a>
       
       <div class="flex gap-3 ml-4">
-        <router-link to="/search" class="p-1.5 bg-gray-900 rounded hover:bg-gray-800 transition-colors flex items-center justify-center" title="Search Novels">
-          <img src="../assets/search_icon.svg" alt="Search" class="h-6 w-6 object-contain" />
+        <router-link 
+          to="/search" 
+          class="border-2 border-black p-1.5 hover:bg-black hover:text-white transition-colors flex items-center justify-center group" 
+          title="Search Novels"
+        >
+          <img src="../assets/search_icon.svg" alt="Search" class="h-5 w-5 object-contain group-hover:invert transition-all" />
         </router-link>
         
-        <router-link to="/profile" class="p-1.5 bg-gray-900 rounded hover:bg-gray-800 transition-colors flex items-center justify-center" title="My Profile">
-          <img src="../assets/profile_icon.png" alt="Profile" class="h-6 w-6 object-contain" />
+        <router-link 
+          to="/profile" 
+          class="border-2 border-black p-1.5 hover:bg-black hover:text-white transition-colors flex items-center justify-center group" 
+          title="My Profile"
+        >
+          <img src="../assets/profile_icon.svg" alt="Profile" class="h-5 w-5 object-contain group-hover:invert transition-all" />
         </router-link>
 
-        <router-link to="/" class="p-1.5 bg-gray-900 rounded hover:bg-gray-800 transition-colors flex items-center justify-center" title="Logout">
-          <img src="../assets/logout_icon.png" alt="Logout" class="h-6 w-6 object-contain" />
+        <router-link 
+          to="/" 
+          class="border-2 border-black p-1.5 hover:bg-black hover:text-white transition-colors flex items-center justify-center group" 
+          title="Logout"
+        >
+          <img src="../assets/logout_icon.svg" alt="Logout" class="h-5 w-5 object-contain group-hover:invert transition-all" />
         </router-link>
       </div>
     </div>
