@@ -28,7 +28,7 @@
         </router-link>
 
       <div class="mt-8 pt-6 border-t border-gray-600">
-        <p class="text-xs text-gray-500">Guest mode active. No account required for this frontend demo.</p>
+        <p class="text-xs text-gray-500">Guest mode active. This is just a demo, all the novels shown are just samples.</p>
       </div>
       
     </div>
