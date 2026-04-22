@@ -4,15 +4,17 @@ import NovelDetail from './views/NovelDetail.vue'
 import Library from './views/Library.vue'
 import Profile from './views/Profile.vue'
 import Novels from './views/Novels.vue'
-import Search from './views/Search.vue' // <-- 1. Import Search
+import Search from './views/Search.vue'
+import Login from './views/Login.vue' 
 
 const routes = [
-  { path: '/', component: Home },
+  { path: '/', component: Login },
+  { path: '/home', component: Home },
   { path: '/novel/:id', component: NovelDetail },
   { path: '/library', component: Library },
   { path: '/profile', component: Profile },
   { path: '/novels', component: Novels },
-  { path: '/search', component: Search } // <-- 2. Add Search route
+  { path: '/search', component: Search }
 ]
 
 export default createRouter({
