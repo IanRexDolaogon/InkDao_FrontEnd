@@ -58,18 +58,17 @@ const filteredNovels = computed(() => {
 <template>
   <main class="max-w-7xl mx-auto px-4 mt-6 space-y-6 pb-10 font-sans">
     
-    <div class="bg-white p-6 border-2 border-black">
-      <h1 class="text-3xl font-bold text-black mb-4 uppercase tracking-tighter">Search</h1>
-      
-      <div class="relative">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-black text-xl">🔍</span>
-        <input 
-          v-model="searchQuery" 
-          type="text" 
-          placeholder="Search by title, native title, or keyword..." 
-          class="w-full bg-white border-2 border-black text-black px-12 py-4 focus:outline-none focus:ring-2 focus:ring-black text-lg placeholder-gray-400"
-        />
+    <div class="relative">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+        <img src="../assets/search_icon.svg" alt="Search" class="h-5 w-5 object-contain" />
       </div>
+      
+      <input 
+        v-model="searchQuery" 
+        type="text" 
+        placeholder="Search by title, native title, or keyword..." 
+        class="w-full bg-white border-2 border-black text-black pl-12 pr-4 py-4 focus:outline-none focus:ring-2 focus:ring-black text-lg placeholder-gray-400"
+      />
     </div>
 
     <div class="flex flex-col lg:flex-row gap-6">
