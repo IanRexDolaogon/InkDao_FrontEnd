@@ -79,7 +79,8 @@ const displayedNovels = computed(() => {
             :title="novel.title" 
             :genre="novel.genre" 
             :chapters="novel.chapters" 
-            :timeAdded="novel.timeAdded" 
+            :timeAdded="novel.timeAdded"
+            :cover="novel.cover"
           />
         </div>
 

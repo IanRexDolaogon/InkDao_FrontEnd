@@ -141,6 +141,7 @@ const filteredNovels = computed(() => {
               :genre="novel.genre" 
               :chapters="novel.chapters" 
               :timeAdded="novel.timeAdded" 
+              :cover="novel.cover"
             />
           </div>
         </div>

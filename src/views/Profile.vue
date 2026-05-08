@@ -65,6 +65,7 @@ const recentlyRead = computed(() => myLibraryNovels.value.slice(0, 5))
           :genre="novel.genre" 
           :chapters="novel.chapters" 
           :timeAdded="novel.timeAdded" 
+          :cover="novel.cover"
         />
       </div>
       <div v-else class="text-center py-10 text-gray-400 font-bold uppercase tracking-wider">

@@ -19,8 +19,17 @@ const novel = novelsData.find(n => n.id === novelId)
       <div class="flex flex-col lg:flex-row gap-8">
         
         <div class="lg:w-1/4 space-y-4">
-          <div class="bg-gray-200 border-2 border-black h-96 w-full flex items-center justify-center text-black text-center px-4 leading-tight font-bold">
-            {{ novel.title }}<br><span class="text-gray-500 font-normal mt-2 text-sm">COVER</span>
+          
+          <div class="bg-gray-200 border-2 border-black aspect-[2/3] max-h-[600px] w-full flex items-center justify-center text-black text-center relative overflow-hidden">
+            <span class="absolute z-0 leading-tight font-bold px-4">
+              {{ novel.title }}<br><span class="text-gray-500 font-normal mt-2 text-sm">COVER</span>
+            </span>
+            <img 
+              :src="novel.cover || `/covers/${novel.id}.jpg`" 
+              alt="Cover" 
+              class="w-full h-full object-cover object-center relative z-10" 
+              @error="$event.target.style.display='none'"
+            />
           </div>
           
           <button class="w-full bg-black text-white border-2 border-black py-3 font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
@@ -82,7 +91,7 @@ const novel = novelsData.find(n => n.id === novelId)
     <div v-else class="text-center py-20 border-2 border-black">
       <h2 class="text-2xl font-bold text-black uppercase tracking-tighter">Novel not found!</h2>
       <p class="text-gray-500 mt-2 font-bold uppercase tracking-widest">The book you are looking for doesn't exist.</p>
-      <router-link to="/" class="text-black font-bold underline mt-4 inline-block hover:opacity-70">← Go back home</router-link>
+      <router-link to="/home" class="text-black font-bold underline mt-4 inline-block hover:opacity-70">← Go back home</router-link>
     </div>
 
   </div>

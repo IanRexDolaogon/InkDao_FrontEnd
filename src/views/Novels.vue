@@ -23,6 +23,7 @@ import { novelsData } from '../data.js'
           :genre="novel.genre" 
           :chapters="novel.chapters" 
           :timeAdded="novel.timeAdded" 
+          :cover="novel.cover"
         />
       </div>
     </div>

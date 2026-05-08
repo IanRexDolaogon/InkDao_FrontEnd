@@ -1,3 +1,15 @@
+<script setup>
+import { globalStore } from '../store.js'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const handleLogout = () => {
+  globalStore.logout()
+  router.push('/')
+}
+</script>
+
 <template>
   <nav class="bg-white text-black flex items-center justify-between px-6 py-4 border-b-2 border-black">
     
@@ -9,6 +21,8 @@
     </div>
 
     <div class="flex items-center gap-8 text-sm font-bold uppercase tracking-wider">
+      
+      <router-link v-if="globalStore.user.role === 'admin'" to="/admin" class="hover:underline">Admin Panel</router-link>
       
       <router-link to="/library" class="hover:underline">Library</router-link>
       <router-link to="/novels" class="hover:underline">Novels</router-link>
@@ -32,13 +46,13 @@
           <img src="../assets/profile_icon.svg" alt="Profile" class="h-5 w-5 object-contain group-hover:invert transition-all" />
         </router-link>
 
-        <router-link 
-          to="/" 
+        <button 
+          @click="handleLogout"
           class="border-2 border-black p-1.5 hover:bg-black hover:text-white transition-colors flex items-center justify-center group" 
           title="Logout"
         >
           <img src="../assets/logout_icon.svg" alt="Logout" class="h-5 w-5 object-contain group-hover:invert transition-all" />
-        </router-link>
+        </button>
       </div>
     </div>
     

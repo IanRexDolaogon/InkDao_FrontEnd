@@ -44,6 +44,7 @@ const rankings = computed(() => ({
             :genre="novel.genre" 
             :chapters="novel.chapters" 
             :timeAdded="novel.timeAdded" 
+            :cover="novel.cover" 
           />
         </div>
       </div>
@@ -86,7 +87,7 @@ const rankings = computed(() => ({
               
               <div class="flex gap-4 text-xs text-gray-500 mt-1 font-medium group-hover:text-gray-300">
                 <span class="flex items-center gap-1">
-                  <img src="../assets/views_icon.svg" alt="Views" class="h-3.5 w-3.5 brightness-0" /> 
+                  <img src="../assets/views_icon.svg" alt="Views" class="h-3.5 w-3.5 brightness-0 group-hover:invert" /> 
                   {{ rank.views }}
                 </span>
                 
