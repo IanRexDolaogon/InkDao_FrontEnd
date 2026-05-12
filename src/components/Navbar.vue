@@ -26,7 +26,6 @@ const handleLogout = () => {
       
       <router-link to="/library" class="hover:underline">Library</router-link>
       <router-link to="/novels" class="hover:underline">Novels</router-link>
-      <a href="#" class="hover:underline">Ranking</a>
       <router-link to="/request" class="hover:text-white transition-colors font-bold border border-gray-700 px-3 py-1 rounded">Request AI Translation</router-link>
       
       <div class="flex gap-3 ml-4">
